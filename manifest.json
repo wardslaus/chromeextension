@@ -1,0 +1,33 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon-phone.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/content_page.css" ],
+      "html": [ "options.html" ],
+      "js": [ "js/jquery.js", "js/content_page.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "This chrome extension use for click to call any number from chrome browser developed by TechExtension (www.techextension.com).",
+   "icons": {
+      "128": "icon-phone.png",
+      "16": "icon-phone.png",
+      "48": "icon-phone.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp0D9DGRgjlSkpluTSGs0yfiaLtKw4o6fa0NRMI/usTyhdVtbQ5z40P3sfPux6ox7QMVqammvGaqffNZk0hnbGiNn+vybmCdvpb9FsQXCeCl5vUy3fICsbRI4Ynxe0VCNgdquQ+H4L+SPkfXUBDncN13Gf7ME1sGe6JjC8Ay7tKaUL+3MWDclEOKQfmCPZENiCwkcRl2Sc0eTKhjM+PsdOpNYNJSNhXNKX20eJNWGTu29CGUaBXbirBvBps0p/4Skrw8mJ6/E9vtdUgleWtnjysqRoKh0KwVmggNC7MIgf0NLNUvfBkSV0blGmGvtu0sKfw587Am3HnQez5E6dsoA0QIDAQAB",
+   "manifest_version": 2,
+   "name": "Click To Call Chrome Extension",
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "storage", "notifications" ],
+   "short_name": "Click To Call",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.3",
+   "web_accessible_resources": [ "images/icon-phone.png", "js/jquery.js", "js/content_page.js" ]
+}
